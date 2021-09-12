@@ -4,8 +4,10 @@ import sqlite3
 # cur.execute('INSERT INTO users (FullName, Name, LastName, Age)
 # VALUES ("RamonMateoNavarro", "Ramon", "Mateo", 26)')
 
+PATH = 'C:\\Users\\fraud\\Desktop\\db\\mydb.db'
+
 def insertFiles(values):
-    con = sqlite3.connect('C:\\Users\\fraud\\Desktop\\db\\mydb.db')
+    con = sqlite3.connect(PATH)
     cur = con.cursor()
     cur.execute('INSERT INTO dataAudio (NameFile, PathFile, DateFile, NumSentence, FullName) '
                 'VALUES (?, ?, ?, ?, ?)', values)

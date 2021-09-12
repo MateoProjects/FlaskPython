@@ -12,6 +12,7 @@ def index():
 def post():
     if request.method == "POST":
         return "IS POST"
+
     elif request.method == "GET":
         return "IS GET"
     return "Hello"

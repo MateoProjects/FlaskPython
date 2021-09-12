@@ -16,5 +16,7 @@ def checkUser(user) -> bool:
     cur.execute('SELECT FullName FROM users where FullName = ?', [user])
     results = con.commit()
     if not cur.fetchall():
+        con.close()
         return False
+    con.close()
     return True
